@@ -26,7 +26,7 @@ app.use('/api', verifyTokenRoute)
 
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join('client', 'build', 'index.html'))
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'))
 })
 
 app.listen(PORT, () => console.log(`Auth Server is running on port ${PORT}`))
